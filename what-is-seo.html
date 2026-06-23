@@ -16,15 +16,38 @@
 
 <!-- Navbar -->
 <header class="shadow-md sticky top-0 bg-white z-50">
-  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="index.html" class="text-2xl font-bold text-blue-600">
-      SEO Agency
-    </a>
+  <nav class="container mx-auto px-6 py-4">
 
-    <a href="blog.html"
-       class="bg-blue-600 text-white px-4 py-2 rounded-lg">
-       Back To Blog
-    </a>
+    <div class="flex justify-between items-center">
+
+      <h1 class="text-2xl font-bold text-blue-600">
+        SEO Agency
+      </h1>
+
+      <ul class="hidden md:flex gap-8 font-medium">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button id="menu-btn" class="md:hidden text-3xl">
+        ☰
+      </button>
+
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden mt-4">
+      <ul class="flex flex-col gap-4 text-center">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
   </nav>
 </header>
 
