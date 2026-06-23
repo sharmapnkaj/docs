@@ -15,26 +15,84 @@
 <body class="bg-white text-gray-800">
 
 <!-- Navbar -->
-<nav class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
+<header class="shadow-md sticky top-0 bg-white z-50">
+  <nav class="container mx-auto px-6 py-4">
 
-  <h1 class="text-2xl font-bold text-blue-600">
-    SEO Agency
-  </h1>
+    <div class="flex justify-between items-center">
 
-  <ul class="flex flex-wrap justify-center gap-4 mt-4 md:mt-0 font-medium">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+      <h1 class="text-2xl font-bold text-blue-600">
+        SEO Agency
+      </h1>
 
-  <a href="contact.html"
-     class="bg-blue-600 text-white px-4 py-2 rounded-lg mt-4 md:mt-0">
-     Get Quote
-  </a>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-8 font-medium">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
 
-</nav>
+      <!-- Desktop Button -->
+      <a href="contact.html"
+         class="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-lg">
+         Get Quote
+      </a>
+
+      <!-- Hamburger Button -->
+      <button id="menu-btn"
+              class="md:hidden text-3xl font-bold">
+        ☰
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+         class="hidden md:hidden mt-4">
+
+      <ul class="flex flex-col gap-4 font-medium text-center">
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="services.html">Services</a></li>
+
+        <li><a href="blog.html">Blog</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+        <li>
+          <a href="contact.html"
+             class="inline-block bg-blue-600 text-white px-5 py-2 rounded-lg">
+             Get Quote
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+</header>
+
+<script>
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuBtn.addEventListener("click", () => {
+
+  mobileMenu.classList.toggle("hidden");
+
+  if (mobileMenu.classList.contains("hidden")) {
+    menuBtn.innerHTML = "☰";
+  } else {
+    menuBtn.innerHTML = "✕";
+  }
+
+});
+</script>
 <!-- Hero -->
 <section class="bg-gray-100"> 
   <div class="container mx-auto px-6 py-24 text-center">
